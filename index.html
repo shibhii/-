@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="shibhi.studio - Experimental dark themed portfolio landing page" />
     <title>shibhi.studio</title>
-    <meta name="description" content="shibhi.studio - Experimental creative portfolio" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="site-shell">
-      <section class="hero" id="top">
-        <div class="hero-copy">
+    <div class="bg-overlay"></div>
+
+    <main class="wrapper">
+      <section class="hero">
+        <div class="content">
+          <p class="kicker">creative garage</p>
           <h1>shibhi.studio</h1>
           <p class="tagline">Experimental.</p>
           <p class="quote">Not just for a television, Teleport to where it's written.</p>
 
-          <nav aria-label="Shibhi Studio categories">
-            <ul class="categories">
+          <nav aria-label="Main categories">
+            <ul class="chips">
               <li><a href="#photography">Photography</a></li>
               <li><a href="#blender">Blender Animation</a></li>
               <li><a href="#projects">Projects</a></li>
@@ -29,20 +32,20 @@
           </nav>
         </div>
 
-        <div class="hero-art" aria-hidden="true">
-          <img class="vinyl" src="vinyl.png" alt="Spinning vinyl record" />
-        </div>
+        <figure class="vinyl-wrap">
+          <img src="vinyl.png" class="vinyl" alt="Vinyl record" />
+        </figure>
       </section>
 
-      <section class="cards" aria-label="Studio categories preview">
-        <article class="card" id="photography"><h2>Photography</h2><p>Frames, street tones, and cinematic still moments.</p></article>
-        <article class="card" id="blender"><h2>Blender Animation</h2><p>3D experiments, procedural textures, and stylized motion.</p></article>
-        <article class="card" id="projects"><h2>Projects</h2><p>Ideas built from sketch to prototype with careful detail.</p></article>
-        <article class="card" id="coreldraw"><h2>CorelDRAW Designs</h2><p>Classic vector layouts, emblem work, and print-ready graphics.</p></article>
-        <article class="card" id="electronics"><h2>Electronics</h2><p>Circuits, bench tests, and practical hardware explorations.</p></article>
-        <article class="card" id="youtube"><h2>YouTube</h2><p>Visual storytelling, process videos, and experimental cuts.</p></article>
-        <article class="card" id="instagram"><h2>Instagram</h2><p>Daily snapshots and creative highlights from ongoing work.</p></article>
-        <article class="card" id="about"><h2>About Me</h2><p>A personal studio space for craft, technology, and expression.</p></article>
+      <section class="grid" aria-label="Category previews">
+        <article id="photography"><h2>Photography</h2><p>Moody captures, classic angles, and cinematic edits.</p></article>
+        <article id="blender"><h2>Blender Animation</h2><p>3D worlds, shader play, and smooth timeline stories.</p></article>
+        <article id="projects"><h2>Projects</h2><p>Build logs and experiments from idea to final output.</p></article>
+        <article id="coreldraw"><h2>CorelDRAW Designs</h2><p>Vector craft, logos, poster layouts, and print-ready art.</p></article>
+        <article id="electronics"><h2>Electronics</h2><p>Circuits, DIY prototypes, practical tests, and tinkering.</p></article>
+        <article id="youtube"><h2>YouTube</h2><p>Visual experiments, edits, and story-driven video drops.</p></article>
+        <article id="instagram"><h2>Instagram</h2><p>Daily style fragments, reels, and behind-the-scenes pieces.</p></article>
+        <article id="about"><h2>About Me</h2><p>Studio notes on design, tech, visuals, and curiosity.</p></article>
       </section>
     </main>
   </body>
