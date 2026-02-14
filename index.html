@@ -7,20 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Vinyl spinning container -->
-  <div class="vinyl-container">
-    <img src="vinyl.png" alt="Spinning Vinyl" class="vinyl">
-    <button id="music-btn">▶️</button>
-    <audio id="bg-music" loop>
-      <source src="music.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+  <!-- Background -->
+  <div class="bg-container"></div>
 
-  <!-- Overlay for exposure effect -->
-  <div class="overlay"></div>
-
-  <!-- Navigation categories -->
-  <nav class="categories">
+  <!-- Left menu -->
+  <nav class="side-menu">
     <ul>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#photography">Photography</a></li>
@@ -34,18 +25,15 @@
     </ul>
   </nav>
 
-  <!-- Content sections -->
-  <section id="projects"><h1>Projects</h1></section>
-  <section id="photography"><h1>Photography</h1></section>
-  <section id="tech"><h1>Computer & Tech</h1></section>
-  <section id="about"><h1>About Lab</h1></section>
-  <section id="youtube"><h1>YouTube</h1></section>
-  <section id="instagram"><h1>Instagram</h1></section>
-  <section id="blender"><h1>Blender & Animations</h1></section>
-  <section id="inventions"><h1>Inventions</h1></section>
-  <section id="electronics"><h1>Electronics</h1></section>
+  <!-- Vinyl container -->
+  <div class="vinyl-container">
+    <img src="vinyl.png" alt="Vinyl" class="vinyl">
+    <button id="music-btn">▶️</button>
+    <audio id="bg-music" loop>
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+  </div>
 
-  <!-- JS for music button -->
   <script>
     const musicBtn = document.getElementById('music-btn');
     const bgMusic = document.getElementById('bg-music');
