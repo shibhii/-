@@ -1,103 +1,91 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* BASE */
 body {
-  height: 100vh;
-  background:
-    radial-gradient(circle at top, #111111 0%, #000000 60%),
-    repeating-radial-gradient(circle at center,
-      rgba(255,255,255,0.015) 0px,
-      rgba(255,255,255,0.015) 1px,
-      transparent 2px,
-      transparent 6px
-    );
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
   overflow: hidden;
+  font-family: inherit; /* keeps your font */
 }
 
-/* Vinyl / grain overlay */
-.grain {
+/* VINYL / GRAIN BACKGROUND */
+.vinyl {
   position: fixed;
   inset: 0;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.06;
+  background-image: url("vinyl.png"); /* SAME FILE NAME */
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  opacity: 0.08;
+  z-index: 0;
+  animation: vinylMove 20s linear infinite;
   pointer-events: none;
-  z-index: 1;
 }
 
-/* Layout */
+/* subtle motion = alive */
+@keyframes vinylMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 300px 300px;
+  }
+}
+
+/* CONTENT */
 .container {
   position: relative;
   z-index: 2;
-  text-align: center;
-  padding: 20px;
+  height: 100vh;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Brand */
+/* MAIN TITLE */
 .brand {
-  font-size: 3.5rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-size: clamp(3rem, 7vw, 6rem);
+  letter-spacing: 0.05em;
 }
 
-.brand .dot {
+/* SUB */
+.experimental {
+  margin-top: 10px;
+  font-size: 1.4rem;
   font-weight: 300;
   opacity: 0.9;
 }
 
-/* Sections */
-.section {
-  margin-top: 35px;
-}
-
-/* Section title */
-.section-title {
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  opacity: 0.75;
-  margin-bottom: 14px;
-}
-
-/* Tagline */
+/* TAGLINE */
 .tagline {
-  font-family: 'Playfair Display', serif;
+  margin-top: 12px;
   font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  opacity: 0.85;
-}
-
-/* Categories */
-.categories ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 10px 24px;
-  margin-top: 30px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.categories li {
-  font-size: 0.9rem;
   font-weight: 300;
-  letter-spacing: 0.6px;
+  max-width: 520px;
+  opacity: 0.75;
+}
+
+/* CATEGORIES */
+.categories {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.categories span {
+  font-size: 0.9rem;
   opacity: 0.7;
   transition: opacity 0.3s ease;
+  cursor: default;
 }
 
-.categories li:hover {
+.categories span:hover {
   opacity: 1;
 }
