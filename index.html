@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Vinyl background container -->
+  <!-- Vinyl spinning container -->
   <div class="vinyl-container">
     <img src="vinyl.png" alt="Spinning Vinyl" class="vinyl">
     <button id="music-btn">▶️</button>
@@ -16,10 +16,10 @@
     </audio>
   </div>
 
-  <!-- Overlay gradient / exposure effect -->
+  <!-- Overlay for exposure effect -->
   <div class="overlay"></div>
 
-  <!-- Navigation Categories -->
+  <!-- Navigation categories -->
   <nav class="categories">
     <ul>
       <li><a href="#projects">Projects</a></li>
@@ -34,15 +34,7 @@
     </ul>
   </nav>
 
-  <!-- Extra creative particles -->
-  <div class="particles">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-  </div>
-
-  <!-- Content Sections -->
+  <!-- Content sections -->
   <section id="projects"><h1>Projects</h1></section>
   <section id="photography"><h1>Photography</h1></section>
   <section id="tech"><h1>Computer & Tech</h1></section>
@@ -53,6 +45,7 @@
   <section id="inventions"><h1>Inventions</h1></section>
   <section id="electronics"><h1>Electronics</h1></section>
 
+  <!-- JS for music button -->
   <script>
     const musicBtn = document.getElementById('music-btn');
     const bgMusic = document.getElementById('bg-music');
