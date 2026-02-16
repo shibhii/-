@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>shibhi.studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shibhi.studio — Experimental</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Cinzel&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/layout.css">
-  <link rel="stylesheet" href="styles/vinyl.css">
-  <link rel="stylesheet" href="styles/panels.css">
+  <link rel="stylesheet" href="style-layout.css">
+  <link rel="stylesheet" href="style-effects.css">
 </head>
 
 <body>
 
-  <main id="app">
+  <!-- BACKGROUND -->
+  <div class="bg"></div>
 
-    <section class="left">
-      <nav id="nav" class="nav"></nav>
+  <!-- MAIN APP -->
+  <div class="app">
 
-      <div class="hero">
-        <h1 id="title"></h1>
-        <p id="tagline" class="tagline"></p>
-        <p id="quote" class="quote"></p>
-      </div>
-    </section>
+    <!-- LEFT COLUMN -->
+    <aside class="left">
+      <h1>shibhi.studio</h1>
 
+      <p class="tagline">
+        Not just for a television,<br>
+        <span>Teleport to where it's written.</span>
+      </p>
+
+      <nav class="menu">
+        <div class="menu-item" data-key="photography">Photography</div>
+        <div class="menu-item" data-key="blender">Blender & Animations</div>
+        <div class="menu-item" data-key="design">Design</div>
+        <div class="menu-item" data-key="electronics">Electronics</div>
+      </nav>
+    </aside>
+
+    <!-- RIGHT COLUMN -->
     <section class="right">
-      <div class="vinyl-shell">
-        <img id="vinyl" src="assets/vinyl.png" alt="vinyl">
-        <button id="vinylControl" aria-label="Play Pause">▶</button>
+      <div class="vinyl-wrap">
+        <img src="vinyl.png" class="vinyl" id="vinyl">
+        <button class="play-btn" id="playBtn">▶</button>
       </div>
     </section>
 
-  </main>
+  </div>
 
-  <!-- floating panel root -->
-  <div id="panelRoot"></div>
+  <!-- BLUR PANEL -->
+  <div class="panel" id="panel">
+    <h2 id="panelTitle"></h2>
+    <p id="panelText"></p>
+  </div>
 
-  <audio id="audio" src="assets/track.mp3"></audio>
+  <audio id="audio" src="track.mp3"></audio>
 
-  <script src="scripts/app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
