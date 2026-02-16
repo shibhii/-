@@ -1,0 +1,27 @@
+{
+  "title": "shibhi.studio",
+  "tagline": "Experimental.",
+  "quote": "Not just for a television, Teleport to where it's written.",
+  "nav": [
+    {
+      "name": "Projects",
+      "sub": ["GNX Visuals", "3D Experiments", "Interactive Design"]
+    },
+    {
+      "name": "Photography",
+      "sub": ["Street", "Abstract", "Nature"]
+    },
+    {
+      "name": "Computer & Tech",
+      "sub": ["Arduino", "Web", "System Mods"]
+    },
+    {
+      "name": "Blender & Animations",
+      "sub": ["Cycles", "Eevee", "Motion"]
+    },
+    {
+      "name": "Electronics",
+      "sub": ["DIY", "Repair", "Power"]
+    }
+  ]
+}
