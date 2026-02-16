@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>shibhi.studio — Experimental</title>
+  <meta charset="UTF-8">
+  <title>shibhi.studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Cinzel&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,37 +13,30 @@
 
   <div class="container">
 
-    <!-- LEFT COLUMN -->
     <div class="left">
-
-      <nav class="nav">
-        <a href="#">Projects</a>
-        <a href="#">Photography</a>
-        <a href="#">Computer & Tech</a>
-        <a href="#">Blender & Animations</a>
-        <a href="#">Electronics</a>
-        <a href="#">Inventions</a>
-        <a href="#">About Lab</a>
-        <a href="#">Instagram · YouTube</a>
-      </nav>
+      <nav id="nav" class="nav"></nav>
 
       <div class="hero">
-        <h1>shibhi.studio</h1>
-        <p class="tagline">Experimental.</p>
-        <p class="quote">
-          Not just for a television,<br>
-          Teleport to where it's written.
-        </p>
+        <h1 id="title"></h1>
+        <p class="tagline" id="tagline"></p>
+        <p class="quote" id="quote"></p>
       </div>
-
     </div>
 
-    <!-- RIGHT COLUMN -->
     <div class="right">
-      <img src="vinyl.png" class="vinyl" alt="vinyl">
+      <div class="vinyl-wrap">
+        <img src="vinyl.png" class="vinyl" id="vinyl">
+        <button id="playBtn" class="play-btn">▶</button>
+      </div>
     </div>
 
   </div>
 
+  <!-- GLASS PANEL -->
+  <div id="panel" class="panel hidden"></div>
+
+  <audio id="audio" src="track.mp3"></audio>
+
+  <script src="app.js"></script>
 </body>
 </html>
