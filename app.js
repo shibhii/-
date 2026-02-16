@@ -1,69 +1,43 @@
-const nav = document.getElementById("nav");
-const panelRoot = document.getElementById("panelRoot");
-const audio = document.getElementById("audio");
 const vinyl = document.getElementById("vinyl");
-const control = document.getElementById("vinylControl");
+const playBtn = document.getElementById("playBtn");
+const audio = document.getElementById("audio");
+
+const panel = document.getElementById("panel");
+const panelTitle = document.getElementById("panelTitle");
+const panelText = document.getElementById("panelText");
 
 let playing = false;
-let activePanel = null;
+let contentData = {};
 
-/* VINYL CONTROL */
-control.onclick = () => {
+/* LOAD JSON CONTENT */
+fetch("content.json")
+  .then(res => res.json())
+  .then(data => contentData = data);
+
+/* PLAY / PAUSE */
+playBtn.addEventListener("click", () => {
   playing = !playing;
-  control.textContent = playing ? "⏸" : "▶";
+
   vinyl.style.animationPlayState = playing ? "running" : "paused";
+  playBtn.textContent = playing ? "❚❚" : "▶";
+
   playing ? audio.play() : audio.pause();
-};
+});
 
-/* PANEL SPAWNER */
-function spawnPanel(btn, item) {
-  killPanel();
+/* MENU CLICK */
+document.querySelectorAll(".menu-item").forEach(item => {
+  item.addEventListener("click", () => {
+    const key = item.dataset.key;
+    const data = contentData[key];
 
-  const rect = btn.getBoundingClientRect();
-  const panel = document.createElement("div");
-  panel.className = "panel";
+    panelTitle.textContent = data.title;
+    panelText.textContent = data.text;
 
-  panel.style.left = rect.right + 20 + "px";
-  panel.style.top = rect.top + "px";
-
-  panel.innerHTML =
-    `<h4>${item.name}</h4>` +
-    item.sub.map(s => `<p>${s}</p>`).join("");
-
-  panelRoot.appendChild(panel);
-  activePanel = panel;
-}
-
-function killPanel() {
-  if (activePanel) {
-    activePanel.remove();
-    activePanel = null;
-  }
-}
-
-/* LOAD DATA */
-fetch("data/content.json")
-  .then(r => r.json())
-  .then(data => {
-
-    title.textContent = data.title;
-    tagline.textContent = data.tagline;
-    quote.textContent = data.quote;
-
-    data.nav.forEach(item => {
-      const btn = document.createElement("button");
-      btn.textContent = item.name;
-
-      btn.onmouseenter = () => spawnPanel(btn, item);
-      btn.onclick = () => spawnPanel(btn, item);
-
-      nav.appendChild(btn);
-    });
+    panel.classList.add("show");
   });
+});
 
-/* CLICK AWAY */
-document.addEventListener("click", e => {
-  if (!e.target.closest(".panel") && !e.target.closest(".nav")) {
-    killPanel();
-  }
+/* CLOSE PANEL */
+panel.addEventListener("click", () => {
+  panel.classList.remove("show");
 });
