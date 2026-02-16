@@ -1,11 +1,18 @@
 {
-  "title": "shibhi.studio",
-  "tagline": "Experimental.",
-  "quote": "Not just for a television, Teleport to where it's written.",
-  "nav": [
-    { "name": "Projects", "sub": ["GNX Visuals", "3D Experiments", "Interactive Design"] },
-    { "name": "Photography", "sub": ["Street", "Abstract", "Nature"] },
-    { "name": "Computer & Tech", "sub": ["Web", "Systems", "Arduino"] },
-    { "name": "Blender & Animations", "sub": ["Cycles", "Eevee", "Motion"] }
-  ]
+  "photography": {
+    "title": "Photography",
+    "text": "Moments, light, texture, silence. Observing before capturing."
+  },
+  "blender": {
+    "title": "Blender & Animations",
+    "text": "3D experiments, motion studies, abstract forms, cinematic frames."
+  },
+  "design": {
+    "title": "Design",
+    "text": "Posters, layouts, typography and minimal visual language."
+  },
+  "electronics": {
+    "title": "Electronics",
+    "text": "DIY circuits, Arduino projects, experiments and inventions."
+  }
 }
