@@ -33337,7 +33337,7 @@ function App() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-xl space-y-12", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-serif text-xl italic text-white/90 lg:text-2xl", children: "Not just for a television, Teleport to where it's written." }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("nav", { className: "space-y-2", "aria-label": "Portfolio categories", children: categories.map((category) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+          /* @__PURE__ */ jsxRuntimeExports.jsx("nav", { className: "category-scroll-area space-y-2", "aria-label": "Portfolio categories", children: categories.map((category) => /* @__PURE__ */ jsxRuntimeExports.jsx(
             "button",
             {
               ref: (el) => {

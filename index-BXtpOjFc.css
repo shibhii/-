@@ -2036,6 +2036,32 @@ video {
   filter: blur(8px);
 }
 
+/* Smooth scroll behavior for category options on all breakpoints */
+.category-scroll-area {
+  max-height: min(48vh, 26rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 0.35rem;
+}
+
+.category-scroll-area::-webkit-scrollbar {
+  width: 0.35rem;
+}
+
+.category-scroll-area::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 9999px;
+}
+
+@media (min-width: 1024px) {
+  .category-scroll-area {
+    max-height: min(52vh, 30rem);
+  }
+}
+
 /* Category hover effect with slimmer contained glow, longer transitions, and animated outline */
 .category-hover-effect {
   position: relative;
